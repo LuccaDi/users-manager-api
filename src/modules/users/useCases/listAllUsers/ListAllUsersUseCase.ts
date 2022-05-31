@@ -14,7 +14,7 @@ class ListAllUsersUseCase {
     if (!userIsAdmin) {
       throw new Error("User not found!");
     } else if (!userIsAdmin.admin) {
-      throw new Error("User is not an admin");
+      throw new Error("You need to be an administrator to list all users!");
     }
 
     const allUsers = this.usersRepository.list();
